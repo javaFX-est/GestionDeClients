@@ -1,3 +1,5 @@
+com\example\AddClientController.class
+com\example\Client.class
 com\example\Main.class
 com\example\ClientManagementApp.class
-com\example\Client.class
+com\example\ClientListController.class

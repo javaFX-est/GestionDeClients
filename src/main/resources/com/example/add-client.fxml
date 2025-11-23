@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<HBox xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.AddClientController">
+   <children>
+      <!-- Left Panel (Light Blue) -->
+      <VBox alignment="CENTER" prefWidth="300.0" spacing="20.0" style="-fx-background-color: #E6F3FF;">
+         <padding>
+            <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+         </padding>
+         <children>
+            <Label text="Gestion de clients" textFill="#404040" wrapText="true">
+               <font>
+                  <Font name="System" size="28.0" />
+               </font>
+            </Label>
+            <StackPane prefHeight="120.0" prefWidth="120.0" style="-fx-background-color: white; -fx-background-radius: 60;">
+               <children>
+                  <Label text="👤">
+                     <font>
+                        <Font size="60.0" />
+                     </font>
+                  </Label>
+               </children>
+            </StackPane>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </VBox>
+      
+      <!-- Right Panel (White) -->
+      <VBox prefWidth="600.0" spacing="20.0" style="-fx-background-color: white;">
+         <padding>
+            <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+         </padding>
+         <children>
+            <Label text="Ajouter un client" textFill="#404040" underline="true">
+               <font>
+                  <Font name="System" size="24.0" />
+               </font>
+            </Label>
+            
+            <VBox spacing="15.0">
+               <children>
+                  <Label text="Nom" />
+                  <TextField fx:id="nomField" prefHeight="30.0" style="-fx-border-color: #B3D9FF; -fx-border-width: 1;" />
+                  
+                  <Label text="Prenom" />
+                  <TextField fx:id="prenomField" prefHeight="30.0" promptText="entrer_le_Prenom" style="-fx-border-color: #B3D9FF; -fx-border-width: 1;" />
+                  
+                  <Label text="Email" />
+                  <TextField fx:id="emailField" prefHeight="30.0" promptText="entrer_un_email_valid" style="-fx-border-color: #B3D9FF; -fx-border-width: 1;" />
+                  
+                  <Label text="Telephone" />
+                  <TextField fx:id="telephoneField" prefHeight="30.0" promptText="entrer_mu,ero_telephone" style="-fx-border-color: #B3D9FF; -fx-border-width: 1;" />
+                  
+                  <Label text="Adresse" />
+                  <TextField fx:id="adresseField" prefHeight="30.0" promptText="entrer_une_adresse" style="-fx-border-color: #B3D9FF; -fx-border-width: 1;" />
+                  
+                  <Label text="Sexe" />
+                  <HBox spacing="20.0">
+                     <children>
+                        <RadioButton fx:id="femininRadio" selected="true" text="Feminin" />
+                        <RadioButton fx:id="masculinRadio" text="Masculin" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            
+            <VBox alignment="CENTER" spacing="10.0">
+               <children>
+                  <Button fx:id="validerButton" onAction="#handleValider" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: black; -fx-text-fill: white; -fx-font-size: 14;" text="Valider" />
+                  <Button fx:id="listeClientsButton" onAction="#handleListeClients" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: black; -fx-text-fill: white; -fx-font-size: 14;" text="Liste clients" />
+                  <Button fx:id="annulerButton" onAction="#handleAnnuler" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: black; -fx-text-fill: white; -fx-font-size: 14;" text="Annuler" />
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</HBox>
+
